@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>初めてのERB</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <header>
+      こんにちは<%= user[:name] %>さん
+      <p>前回ログイン日時<%= user[:last_logged_in] %></p>
+    </header>
+
+    <main>
+      <h2>お気に入りブログリスト</h2>
+      <ul>
+        <% user[:favorited_blog_titles].each do |title| %>
+          <li>
+            <a href="#"><%= title %></a>
+          </li>
+        <% end %>
+      </ul>
+    </main>
+  </body>
+</html>
