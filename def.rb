@@ -1,6 +1,5 @@
 # defというキーワードでメソッドを定義できる
 # メソッドとは、いくつかの処理をまとめて、名前をつけたもの
-# メッセージともいう
 # speak_hello, speak_goodbyなどがメソッドの名前
 def speak_hello
   puts "hello"
@@ -68,3 +67,27 @@ end
 puts speak_keyword(message: "can i ask you?")
 puts speak_keyword(message: "can i ask you?", person: "bob")
 puts speak_keyword(person: "bob")
+
+# メソッドには必ず、返り値(メソッドを実行した結果)がある
+# メソッドの中の処理も重要だが、メソッドが何を返すのかも大切
+def hash_to_string(hash)
+  # 値の初期化。これでstrという変数には空の文字列がはいる
+  # これをしておかないと、str += という記述でエラーが出る
+  str = ""
+
+  # hashもたくさんの要素が集まっているものなので、eachが使える
+  # hashは、キーとバリュー(値)がペアになっているので、eachで取り出したときには、２つ同時に出てくる
+  # キーをk, バリューをvの変数へ入れている
+  hash.each do |k, v|
+    # str = str + "#{k.to_s} is #{v}, " と同じ
+    str += "#{k.to_s} is #{v}, "
+  end
+  # 最後に書かれている変数（または式）がメソッドの返り値になる。
+  str
+end
+
+user = { name: "Uotani", age: "29" }
+# hash_to_stringメソッドの返り値をuser_stringという変数へ代入
+user_string = hash_to_string(user)
+# user_stringをターミナルへ表示
+puts user_string

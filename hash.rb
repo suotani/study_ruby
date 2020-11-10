@@ -20,3 +20,10 @@ klass = {
 puts klass[:teams]
 puts klass[:teacher][:age]
 puts klass[:teams].first[:name]
+
+# hashもたくさんの要素が集まっているものなので、eachが使える
+# hashは、キーとバリュー(値)がペアになっているので、eachで取り出したときには、２つ同時に出てくる
+# キーをk, バリューをvの変数へ入れている
+person.each do |k, v|
+  puts "#{k}: #{v}"
+end
