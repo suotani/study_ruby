@@ -1,0 +1,6 @@
+<%- style.each do |class_name, propaties| -%>
+  <%= "#{class_name},," %>
+  <%- propaties.each do |propaty, value| -%>
+    <%= ",#{propaty}, #{value}" %>
+  <%- end -%>
+<%- end -%>

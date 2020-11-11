@@ -29,3 +29,5 @@ File.open("./index.html", "w") do |f|
 
 # endが来ると、開いたファイルを閉じる
 end
+
+

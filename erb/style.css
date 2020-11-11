@@ -1,0 +1,9 @@
+.container{
+  width: 80%;
+  margin: auto;
+}
+.user-list{
+  background-color: #888;
+  margin-top: 50px;
+  padding: 20px;
+}
